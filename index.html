@@ -1,1 +1,32 @@
-<h1>--欢迎访问--</h1>
+<!DOCTYPE html>
+<html>
+
+<head>
+  <style type="text/css">
+    body {
+      margin: 0;
+      padding: 0;
+    }
+  </style>
+</head>
+
+<body>
+  <iframe id="myIframe" src="http://117.50.40.118" scrolling="yes" frameborder="0"></iframe>
+</body>
+
+<script>
+  document.body.parentNode.style.overflowX = "hidden";
+  document.body.parentNode.style.overflowY = "hidden";
+
+  function reinitIframe() {
+    const oIframe = document.getElementById('myIframe');
+    const deviceWidth = document.documentElement.clientWidth;
+    const deviceHeight = document.documentElement.clientHeight;
+    oIframe.style.width = (Number(deviceWidth)) + 'px';
+    oIframe.style.height = (Number(deviceHeight)) + 'px';
+  }
+
+  setInterval(reinitIframe, 100)
+</script>
+
+</html>
